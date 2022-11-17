@@ -548,7 +548,7 @@ usematrix[is.na(usematrix)] <- 0
 #calculate similarity in roost use to create individual x individual matrix for roost use
 ### since we are doing this there is no need to add rows for boxes that are not used
 
-usesimilarity<-as.matrix(simil(usematrix, y = NULL, method = NULL, diag = FALSE, upper = FALSE,
+usesimilarity<-as.matrix(simil(usematrix, y = NULL, method = "correlation", diag = FALSE, upper = FALSE,
                                pairwise = FALSE, by_rows = TRUE, convert_distances = TRUE,
                                auto_convert_data_frames = TRUE))
 
